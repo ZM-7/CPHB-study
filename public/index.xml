@@ -1,12 +1,121 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>Log Journal</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on Log Journal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Dec 2024 16:20:54 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Dec 2024 23:40:15 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sort</title>
+      <link>http://localhost:1313/sort/</link>
+      <pubDate>Sun, 15 Dec 2024 23:40:15 +0000</pubDate>
+      
+      <guid>http://localhost:1313/sort/</guid>
+      <description>&lt;h2 id=&#34;sorting&#34;&gt;Sorting&lt;/h2&gt;
+&lt;h3 id=&#34;on-bubble-sort&#34;&gt;O(n²): Bubble Sort&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&#39;
+#include &amp;lt;iostream&amp;gt;
+
+#define LP(i, a, b) for ( i = a; i&amp;lt;= n; i++)
+
+using namespace std;
+
+void Bubble_sort(int a[], int n){
+  int i = 0;
+  int j = 0;
+  int tmp = 0;
+  
+  LP(i, 0, n){
+    LP(j, i+1, n){ //fix the first index scroll through the second
+      if(a[i]&amp;gt;a[j]){
+        tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+      }
+    }
+  }
+}
+
+int main(){
+  int n = 0; int i = 0;
+  printf(&amp;quot;enter the size of the array: \t&amp;quot;);
+  scanf(&amp;quot;\n %d&amp;quot;, &amp;amp;n);
+  int a[n];
+  printf(&amp;quot;the values of your array: \n&amp;quot;);
+  LP(i, 0, n){
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;a[i]);
+  }
+  printf(&amp;quot;\nyour array is : &amp;quot;);
+  LP(i, 0, n){
+    printf(&amp;quot;%d &amp;quot;, a[i]);
+  }
+  printf(&amp;quot;\nyour sorted array is : &amp;quot;);
+  Bubble_sort(a, n);
+  LP(i, 0, n){
+       printf(&amp;quot;%d &amp;quot;, a[i]);
+     }
+
+  
+  return 0;
+}
+&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;on-logn-merge-sort&#34;&gt;O(n logn): Merge Sort&lt;/h3&gt;</description>
+      <content>&lt;h2 id=&#34;sorting&#34;&gt;Sorting&lt;/h2&gt;
+&lt;h3 id=&#34;on-bubble-sort&#34;&gt;O(n²): Bubble Sort&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&#39;
+#include &amp;lt;iostream&amp;gt;
+
+#define LP(i, a, b) for ( i = a; i&amp;lt;= n; i++)
+
+using namespace std;
+
+void Bubble_sort(int a[], int n){
+  int i = 0;
+  int j = 0;
+  int tmp = 0;
+  
+  LP(i, 0, n){
+    LP(j, i+1, n){ //fix the first index scroll through the second
+      if(a[i]&amp;gt;a[j]){
+        tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+      }
+    }
+  }
+}
+
+int main(){
+  int n = 0; int i = 0;
+  printf(&amp;quot;enter the size of the array: \t&amp;quot;);
+  scanf(&amp;quot;\n %d&amp;quot;, &amp;amp;n);
+  int a[n];
+  printf(&amp;quot;the values of your array: \n&amp;quot;);
+  LP(i, 0, n){
+    scanf(&amp;quot;%d&amp;quot;, &amp;amp;a[i]);
+  }
+  printf(&amp;quot;\nyour array is : &amp;quot;);
+  LP(i, 0, n){
+    printf(&amp;quot;%d &amp;quot;, a[i]);
+  }
+  printf(&amp;quot;\nyour sorted array is : &amp;quot;);
+  Bubble_sort(a, n);
+  LP(i, 0, n){
+       printf(&amp;quot;%d &amp;quot;, a[i]);
+     }
+
+  
+  return 0;
+}
+&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;on-logn-merge-sort&#34;&gt;O(n logn): Merge Sort&lt;/h3&gt;
+</content>
+    </item>
+    
     <item>
       <title>Hello</title>
       <link>http://localhost:1313/posts/hello/</link>

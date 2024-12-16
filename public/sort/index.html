@@ -2,16 +2,16 @@
 <html lang="en">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
-    <title>Tags :: Log Journal</title>
+    <title>Sort :: Log Journal</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="" />
+<meta name="description" content="Sorting O(n²): Bubble Sort &#39; #include &lt;iostream&gt; #define LP(i, a, b) for ( i = a; i&lt;= n; i&#43;&#43;) using namespace std; void Bubble_sort(int a[], int n){ int i = 0; int j = 0; int tmp = 0; LP(i, 0, n){ LP(j, i&#43;1, n){ //fix the first index scroll through the second if(a[i]&gt;a[j]){ tmp = a[i]; a[i] = a[j]; a[j] = tmp; } } } } int main(){ int n = 0; int i = 0; printf(&quot;enter the size of the array: \t&quot;); scanf(&quot;\n %d&quot;, &amp;n); int a[n]; printf(&quot;the values of your array: \n&quot;); LP(i, 0, n){ scanf(&quot;%d&quot;, &amp;a[i]); } printf(&quot;\nyour array is : &quot;); LP(i, 0, n){ printf(&quot;%d &quot;, a[i]); } printf(&quot;\nyour sorted array is : &quot;); Bubble_sort(a, n); LP(i, 0, n){ printf(&quot;%d &quot;, a[i]); } return 0; } &#39; O(n logn): Merge Sort" />
 <meta name="keywords" content="" />
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="http://localhost:1313/tags/" />
+<link rel="canonical" href="http://localhost:1313/sort/" />
 
 
 
@@ -74,10 +74,10 @@
 
 
 <meta property="og:locale" content="en" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Tags">
-<meta property="og:description" content="" />
-<meta property="og:url" content="http://localhost:1313/tags/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Sort">
+<meta property="og:description" content="Sorting O(n²): Bubble Sort &#39; #include &lt;iostream&gt; #define LP(i, a, b) for ( i = a; i&lt;= n; i&#43;&#43;) using namespace std; void Bubble_sort(int a[], int n){ int i = 0; int j = 0; int tmp = 0; LP(i, 0, n){ LP(j, i&#43;1, n){ //fix the first index scroll through the second if(a[i]&gt;a[j]){ tmp = a[i]; a[i] = a[j]; a[j] = tmp; } } } } int main(){ int n = 0; int i = 0; printf(&quot;enter the size of the array: \t&quot;); scanf(&quot;\n %d&quot;, &amp;n); int a[n]; printf(&quot;the values of your array: \n&quot;); LP(i, 0, n){ scanf(&quot;%d&quot;, &amp;a[i]); } printf(&quot;\nyour array is : &quot;); LP(i, 0, n){ printf(&quot;%d &quot;, a[i]); } printf(&quot;\nyour sorted array is : &quot;); Bubble_sort(a, n); LP(i, 0, n){ printf(&quot;%d &quot;, a[i]); } return 0; } &#39; O(n logn): Merge Sort" />
+<meta property="og:url" content="http://localhost:1313/sort/" />
 <meta property="og:site_name" content="Log Journal" />
 
   <meta property="og:image" content="http://localhost:1313/og-image.png">
@@ -86,10 +86,10 @@
 <meta property="og:image:height" content="627">
 
 
+  <meta property="article:published_time" content="2024-12-15 23:40:15 &#43;0000 UTC" />
 
 
 
-  <link href="/tags/index.xml" rel="alternate" type="application/rss+xml" title="Log Journal" />
 
 
 
@@ -124,14 +124,79 @@
 
   <div class="content">
     
-  <div class="terms">
-    <h1>Tags</h1>
+<article class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/sort/">Sort</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2024-12-15</time></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="sorting">Sorting<a href="#sorting" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="on-bubble-sort">O(n²): Bubble Sort<a href="#on-bubble-sort" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<pre><code>'
+#include &lt;iostream&gt;
+
+#define LP(i, a, b) for ( i = a; i&lt;= n; i++)
+
+using namespace std;
+
+void Bubble_sort(int a[], int n){
+  int i = 0;
+  int j = 0;
+  int tmp = 0;
+  
+  LP(i, 0, n){
+    LP(j, i+1, n){ //fix the first index scroll through the second
+      if(a[i]&gt;a[j]){
+        tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+      }
+    }
+  }
+}
+
+int main(){
+  int n = 0; int i = 0;
+  printf(&quot;enter the size of the array: \t&quot;);
+  scanf(&quot;\n %d&quot;, &amp;n);
+  int a[n];
+  printf(&quot;the values of your array: \n&quot;);
+  LP(i, 0, n){
+    scanf(&quot;%d&quot;, &amp;a[i]);
+  }
+  printf(&quot;\nyour array is : &quot;);
+  LP(i, 0, n){
+    printf(&quot;%d &quot;, a[i]);
+  }
+  printf(&quot;\nyour sorted array is : &quot;);
+  Bubble_sort(a, n);
+  LP(i, 0, n){
+       printf(&quot;%d &quot;, a[i]);
+     }
+
+  
+  return 0;
+}
+'
+</code></pre>
+<h3 id="on-logn-merge-sort">O(n logn): Merge Sort<a href="#on-logn-merge-sort" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+
+      </div></div>
+
+  
+
+  
     
-    <ul>
-      
-      
-    </ul>
-  </div>
+
+  
+</article>
 
   </div>
 
